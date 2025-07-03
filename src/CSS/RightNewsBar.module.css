@@ -1,0 +1,52 @@
+/* RightNewsBar.module.css */
+
+
+
+.heading {
+  text-align: center; /* Center align the heading */
+  font-weight: bold; /* Bold text */
+}
+
+.carouselContainer {
+  height: 300px;
+  position: relative;
+  max-width: 500px; /* Adjust as necessary */
+  margin: auto; /* Center the carousel */
+  overflow: hidden; /* Hide overflow to ensure only one item is visible at a time */
+  border: 1px solid #dad4d4; /* Optional border for better visibility */
+  border-radius: 4px; /* Optional rounded corners */
+}
+
+.carouselItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0; /* Hide inactive items */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.carouselItem.active {
+  opacity: 1; /* Show only the active item */
+}
+
+.carouselImage {
+  width: 100%; /* Responsive images */  
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+
+.cardTitle {
+  color: white; /* Text color for the title */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.cardTitle:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+@media (max-width: 768px) {
+  .container{
+    margin-top: rem;
+  }
+}

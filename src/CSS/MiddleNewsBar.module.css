@@ -1,0 +1,80 @@
+.middleNewsBar {
+  background-color: white;
+}
+
+.newsHead{
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #333;
+  line-height: 1.5; 
+  margin: 0px;
+}
+
+.newsHeading {
+  color:  #f942b9;
+}
+.newsLink {
+  text-decoration: none;  /* Removes underline */
+  color: inherit;         /* Inherits the color of the parent element */
+}
+
+.newsLink:hover {
+  color:  #f942b9;     /* Changes color on hover */
+}
+
+.newsImage{
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.categoryFirst,.firstDate{
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.firstCategoryandDate
+{
+  margin: 12px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstNews{
+  padding: 0px 20px;
+  border-bottom: 1px solid #ccc; 
+}
+
+.mappedNews{
+  border-bottom: 1px solid #ccc; 
+  padding: 15px 0px;
+}
+
+.mappedNewsHead{
+  font-size: 20px;
+  font-weight: bolder;
+  color: #333;
+  line-height: 1.5; 
+}
+
+.CategoryandDate{
+  margin: 8px 0px;
+  display: flex;
+  justify-items: flex-start;
+}
+
+.categoryDate{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.mappedNews:hover{
+  background-color: #efefef;
+}
+
+@media (max-width: 768px) {
+ .middleNewsBar{
+  margin-bottom: 3rem;
+ }
+}

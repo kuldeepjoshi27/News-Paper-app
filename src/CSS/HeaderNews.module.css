@@ -1,0 +1,30 @@
+.newsCategory {
+  font-size: 12px;
+  font-weight: bold;
+  color: #e54242;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.newsCategoryLink,.newsSubheadingLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.newsheading {
+  font-size: 14px;
+  font-weight: 550;
+  margin: 5px 0;
+  color: #333;
+}
+
+.newsImageHeader {
+  width: 80px;
+  height: 66px;
+  object-fit: cover;
+  float: right;
+  margin-left: auto;
+}
+.outerdiv{
+  background-color: #f8f8f8;
+}

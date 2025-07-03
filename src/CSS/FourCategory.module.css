@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: flex-start; /* Cards aligned to start (left) */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5px; /* Reduce gap between cards */
+  margin: 30px 10px;
+  padding: 0 20px; /* Optional: Padding for the container */
+}

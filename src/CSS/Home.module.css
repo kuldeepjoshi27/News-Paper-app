@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+
+.leftNewsBar {
+  position: sticky ;
+  top: 0;
+}
+
+.middleNewsBar {
+  position: sticky ;
+  top: 0;
+  border-left: 1px solid #ccc; 
+  border-right: 1px solid #ccc; 
+}
+
+.otherNews {
+  position: sticky ;
+  top: 0;
+  height: 100%; /* yeh height aapko adjust karna hoga */
+
+}
+ 
+

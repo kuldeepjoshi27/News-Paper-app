@@ -1,0 +1,172 @@
+.container {
+  max-width: 1200px; /* or any value suitable for your design */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px; /* Adjust as needed */
+  padding-right: 20px; /* Adjust as needed */
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+.pageTitle {
+  font-size: 30px;
+  font-weight: 650;
+  margin: 20px 0;
+  margin-bottom: 0.5rem; /* Space between title and border */
+  padding-bottom: 0.5rem; /* Space between title text and border */
+  border-bottom: 2px solid #000; /* Thin black line under the title */
+}
+
+.titleContainer {
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+ 
+}
+
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure space between text and image */
+  border-right: 1px solid #ccc; margin-right: 10px; /* ya apni zarurat ke hisab se */
+  padding-right: 20px;
+}
+.borderRight {
+  border-right: 1px solid #ccc;
+}
+
+.heading {
+  font-size: 28px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  font-weight: 530;
+  flex-grow: 2; 
+}
+
+.headingLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headingLink:hover {
+  color: rgb(250, 31, 31);
+}
+
+.firstItemCategoryDiv {
+  font-size: 12px;
+}
+
+.category{
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
+.description {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  line-height: 1.5; /* Adjust line height for better readability */
+  flex-grow: 2; /* Allow description to take up available space */
+}
+
+/* Read more button */
+.readMore {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff; /* Change this to your preferred button color */
+  border-radius: 2px;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+
+.readMore:hover {
+  background-color: #000000; /* Change this to your preferred hover color */
+  color: white;
+}
+
+/* Featured image style */
+.featuredImage {
+  width: 100%;
+  height: auto;
+}
+.horizontalLine {
+  border: none;
+  border-top: 1px solid #9c9c9c;
+  margin: 20px 0;
+}
+
+.emptyColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgb(48, 48, 48); /* Correct syntax for the border */
+  height: 100%;
+}
+
+.emptyMessage {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Right bar content */
+.rightImage {
+  width: 100%;
+  height: 100%;
+}
+
+.headingRight {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.headingRightLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headingRightLink:hover {
+  color: rgb(250, 31, 31);
+}
+
+/* For items in the left column below the first */
+.headingBelow {
+  font-size: 17px;
+  font-weight: 550;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.headingBelow:hover {
+  color: rgb(250, 31, 31);
+}
+
+.BelowItemCategoryDiv{
+  font-size: 12px;
+}
+
+
+
+.fullWidthImage {
+  width: 100%;
+  height: auto;
+}
+
+.rightContent {
+  margin-top: 10px;
+}
+
+.dateRight {
+  font-size: 0.9rem; /* Adjust as needed */
+}
+.rightImage{
+  background-size: cover;
+}
+

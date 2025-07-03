@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.signButton {
+  background-color:  #0056b3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signButton:hover {
+  background-color: #0056b3;
+}
+
+.formContainer {
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.passwordContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.passwordInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+.submitButton {
+  background-color:  #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #218838;
+}
+
+.forgotPassword {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.checkboxContainer {
+  margin-bottom: 15px;
+}
+
+.belowBar{
+  margin-top: 15px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ justify-content: center;
+}

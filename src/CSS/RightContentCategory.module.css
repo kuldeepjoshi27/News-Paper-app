@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Optional: Set a maximum width */
+  margin: auto; /* Center the container */
+}
+
+.newsSegment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Space between segments */
+}
+
+
+
+.newsheadingLink {
+  text-decoration: none;
+  color: #000; /* Adjust color as needed */
+}
+
+.newsheading {
+  font-size: 15px; /* Increase heading size */
+  margin: 0;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 11px;
+  color: #888;
+}
+
+.newsImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure image fits within container */
+}
+
+.separator {
+  margin: 10px 0; /* Space around the separator */
+  border: 0;
+  border-top: 1px solid #ddd;
+}

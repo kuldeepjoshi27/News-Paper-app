@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  position: fixed; /* Fixes the sidebar's position */
+  height: 100vh; /* Makes the sidebar full height */
+  background-color: #f8f9fa; /* Background color for the sidebar */
+  padding: 20px; /* Padding inside the sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+}
+
+.content {
+  margin-left: 300px; /* Ensures content doesn't overlap with the sidebar */
+  padding: 20px; /* Padding inside the content area */
+  width: calc(100% - 300px); /* Adjust width to fill remaining space */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
