@@ -15,6 +15,31 @@ export const DataProvider = ({ children }) => {
     return localStorage.getItem("sessionToken") !== null;
   });
 
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/news");
+      const result = await response.json();
+      setData(result.news);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchDraftNews = async () => {
+    setLoadingDrafts(true);
+    try {
+      const response = await fetch("http://localhost:3000/draft-news");
+      const data = await response.json();
+      setDraftData(data.news);
+    } catch (error) {
+      console.error("Error fetching draft news:", error);
+    } finally {
+      setLoadingDrafts(false);
+    }
+  };
+
   const login = () => {
     setIsLoggedIn(true); // Update login state
   };
@@ -25,33 +50,10 @@ export const DataProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/news");
-        const result = await response.json();
-        setData(result.news);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchData();
   }, []);
 
   useEffect(() => {
-    const fetchDraftNews = async () => {
-      setLoadingDrafts(true);
-      try {
-        const response = await fetch("http://localhost:3000/draft-news");
-        const data = await response.json();
-        setDraftData(data.news);
-      } catch (error) {
-        console.error("Error fetching draft news:", error);
-      } finally {
-        setLoadingDrafts(false);
-      }
-    };
     fetchDraftNews();
   }, []);
 
@@ -79,8 +81,8 @@ export const DataProvider = ({ children }) => {
       });
       setData(
         data.map((item) =>
-          item.id === id ? { ...item, ...updatedData } : item
-        )
+          item.id === id ? { ...item, ...updatedData } : item,
+        ),
       ); // Update item in state
     } catch (error) {
       console.error("Error updating news:", error);

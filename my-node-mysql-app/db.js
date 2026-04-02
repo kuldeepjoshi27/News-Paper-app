@@ -1,16 +1,16 @@
 /* eslint-disable no-undef */
-// db.js
+require("dotenv").config();
+
 const mysql = require("mysql2");
 
-// Create a connection to the database
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "2727",
-  database: "jaipur_halchal",
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
-// Connect to the database
 connection.connect((err) => {
   if (err) {
     console.error("Error connecting to MySQL:", err.stack);

@@ -13,7 +13,7 @@ const MiddleNewsBar = () => {
   const topNews = data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const [firstNews, ...remainingNews] = topNews.filter(
-    (news) => news.top_news === 0
+    (news) => news.top_news === 0,
   );
   const getCurrentDateInHindi = () => {
     const options = {
@@ -30,10 +30,10 @@ const MiddleNewsBar = () => {
   return (
     <div className={styles.middleNewsBar}>
       <div className={styles.firstNews}>
-        <Link to={`/news/${firstNews.slug}`} className={styles.newsLink}>
+        <Link to={`/news/${firstNews?.slug}`} className={styles.newsLink}>
           <h3 className={styles.newsHead}>
-            <span className={styles.newsHeading}>{firstNews.heading}: </span>
-            {firstNews.subheading}
+            <span className={styles.newsHeading}>{firstNews?.heading}: </span>
+            {firstNews?.subheading}
           </h3>
         </Link>
 

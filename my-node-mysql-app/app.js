@@ -4,7 +4,7 @@
 require("dotenv").config();
 
 const express = require("express");
-const cors = require("cors"); // Import the CORS middleware
+const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const app = express();
@@ -17,11 +17,11 @@ const passport = require("passport");
 const GitHubStrategy = require("passport-github2").Strategy;
 const nodemailer = require("nodemailer");
 const { sendEmail } = require("./emailServiceFile");
-const axios = require("axios"); // Add this line
+const axios = require("axios");
 
 const session = require("express-session");
 const CLIENT_ID =
-  "421410020066-cd74vod6bc63tb3v1gdjjvtfhobuvhrj.apps.googleusercontent.com";
+  "421410020066-bqthj52t97sjefu6qiktd9s7mpkgbgl3.apps.googleusercontent.com";
 
 const client = new OAuth2Client(CLIENT_ID);
 
@@ -69,7 +69,7 @@ app.get("/auth/github/callback", async (req, res) => {
         headers: {
           Accept: "application/json",
         },
-      }
+      },
     );
 
     const accessToken = tokenResponse.data.access_token;
@@ -87,7 +87,7 @@ app.get("/auth/github/callback", async (req, res) => {
     // Example: req.session.user = userData; or store in DB
 
     // Redirect to the homepage of your React app
-    res.redirect("http://localhost:5173"); 
+    res.redirect("http://localhost:5173");
   } catch (error) {
     console.error("Error during GitHub OAuth:", error.message);
 
@@ -103,7 +103,7 @@ async function findOrCreateUser(payload) {
       "SELECT * FROM users WHERE email = ? OR google_id = ?",
       [payload.email, payload.sub], // Use email or google_id to search
       (err, result) => {
-        if (err) reject(err); 
+        if (err) reject(err);
 
         if (result.length > 0) {
           // User exists, return user
@@ -122,7 +122,7 @@ async function findOrCreateUser(payload) {
             resolve(newUser);
           });
         }
-      }
+      },
     );
   });
 }
@@ -456,7 +456,7 @@ app.post("/login", (req, res) => {
     const sessionToken = jwt.sign(
       { email: result.email },
       process.env.JWT_SECRET_KEY, // Replace with your secret key
-      { expiresIn: "1h" } // Set JWT expiration time as needed
+      { expiresIn: "1h" }, // Set JWT expiration time as needed
     );
 
     // If no user is found
@@ -492,7 +492,7 @@ app.post("/google-login", async (req, res) => {
     const sessionToken = jwt.sign(
       { userId: user.google_id, email: user.email },
       process.env.JWT_SECRET_KEY, // Replace with your secret key
-      { expiresIn: "1h" } // Set JWT expiration time as needed
+      { expiresIn: "1h" }, // Set JWT expiration time as needed
     );
 
     // Send the session token as response
